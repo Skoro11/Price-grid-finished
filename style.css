@@ -1,0 +1,110 @@
+
+body{
+  background-color: #F0F8FF;
+}
+.grid-container{
+
+  width:80%;
+  height:300px;
+  margin:50px auto;
+  display:grid;
+  grid-template-columns:50% 50%;
+  grid-template-areas:
+    "heading heading"
+    "sidebar content"
+
+}
+/* First grid CSS*/
+
+.grid-item-1{
+  background-color:white;
+  grid-area:heading;
+  padding:0 25px 25px 25px;
+  border-radius:10px 10px 0 0 ;
+}
+.heading-1 h2{
+  color:hsl(179, 62%, 43%);
+  margin-top:30px;
+}
+.heading-1 h4{
+  color:hsl(71, 73%, 54%);
+  margin:0 0 -20px 0;
+
+}
+
+
+/*Second grid CSS*/
+
+.grid-item-2{
+  background-color:hsl(179, 62%, 43%);
+  grid-area:sidebar;
+  padding:10px 25px;
+  border-radius:0 0 0 10px;
+}
+.grid-item-2 h4{
+  color:white;
+  margin-bottom:0;
+}
+.grid-2-text1{
+  font-size:25px;
+  color:white;
+  margin-bottom:30px;
+}
+.grid-2-text2{
+    color:#BBBCC5;
+}
+.grid-2-text3{
+  color:white;
+  margin-top:5px;
+}
+.grid-2-button{
+  color:white;
+  width:100%;
+  height:40px;
+  border-radius:5px;
+  background-color:hsl(71, 73%, 54%);
+  border:none;
+  margin:25px 0 10px 0;
+}
+.grid-2-button:hover{
+  background-color:black;
+}
+
+/*CSS third grid*/
+.grid-item-3{
+  background-color:#4abebd;
+  grid-area:content;
+  padding:15px;
+  border-radius:0 0 10px 0;
+}
+.grid-item-3 h4{
+  color:white;
+  margin:10px 0 10px 10px;
+}
+.grid-3-text{
+
+      margin:10px 0 10px 0px;
+      color:#E8E8E8;
+}
+ul{
+  list-style:none;
+  margin:0 0 10px 10px;
+  padding:0;
+}
+@media only screen and (max-width:375px){
+  .grid-container{
+    height:auto;
+    grid-template-areas:
+      "heading heading"
+      "sidebar sidebar"
+      "content content"
+  }
+  .grid-item-2{
+    border-radius: 0 0 0 0;
+  }
+  .grid-item-3{
+    border-radius:0 0 10px 10px;
+    margin: 0 0 15px 0;
+
+  }
+}
